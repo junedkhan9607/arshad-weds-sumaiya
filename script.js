@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    // Pause music when page goes to background
+      // Pause music when page goes to background
 document.addEventListener("visibilitychange", () => {
     if (document.hidden && isMusicPlaying) {
         music.pause();
