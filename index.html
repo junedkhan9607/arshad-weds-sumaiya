@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Wedding of Arshad & Sumaiya</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+    <!-- ===== MUSIC PLAYER ===== -->
+   <audio id="bgMusic" loop preload="none">
+        <source src="guitar music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ===== MUSIC TOGGLE BUTTON ===== -->
+    <button id="musicToggle" class="music-float-btn" aria-label="Toggle Music">
+        <i class="fas fa-music"></i>
+        <span class="pulse-ring"></span>
+    </button>
+
+    <!-- ===== CURTAIN OVERLAY ===== -->
+    <div id="curtainOverlay">
+        <div class="curtain-panel left"></div>
+        <div class="curtain-panel right"></div>
+        <div class="curtain-center">
+            <div class="invitation-logo">✦</div>
+            <h1>The Royal Invitation</h1>
+            <p class="sub-text">~ Arshad & Sumaiya ~</p>
+            <div class="open-btn">
+                <span>Tap to Open</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div id="mainContent">
+
+        <!-- SECTION 1: HERO -->
+        <section class="section hero" id="hero">
+            <div class="floating-particles" id="particles"></div>
+            <div class="hero-content">
+                <span class="blessing">✦ بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ ✦</span>
+                <p class="invite-line">Under the Blessing of Almighty Allah,<br />We Invite You To Celebrate The Valima Of</p>
+                <h1 class="couple-title">Arshad <br> <span class="amp">&</span> <br>Sumaiya</h1>
+                <div class="scroll-indicator section-scroll-next" data-next="scratch">
+                    <span>Scroll to explore</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SCRATCH DATE -->
+        <section class="section scratch" id="scratch">
+            <div class="scratch-wrapper">
+                <h2 class="section-title">Reveal the Date</h2>
+                <p class="scratch-hint">✦ Scratch the golden card ✦</p>
+                <div class="scratch-box">
+                    <div class="date-hidden">
+                        <span class="date-label">Save The Date</span>
+                        <strong class="date-main">27th December 2026</strong>
+                        <span class="date-hijri">17 Jumada al-Thani 1448 AH</span>
+                    </div>
+                    <canvas id="scratchCanvas" width="340" height="220"></canvas>
+                </div>
+                <!-- Countdown Timer -->
+                <div id="countdownContainer" class="countdown-container">
+                    <h3 class="countdown-title"><i class="fas fa-mosque"></i> Time Until The Big Day</h3>
+                    <div class="countdown-grid">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Mins</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Secs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator section-scroll-next" data-next="couple">
+                    <span>Scroll to explore</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: COUPLE -->
+        <section class="section couple" id="couple">
+            <div class="couple-wrapper">
+                <h2 class="section-title">The Happy Couple</h2>
+                <div class="couple-grid">
+                    <div class="profile-card">
+                        <div class="profile-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Groom</h3>
+                        <h4>Arshad Khan</h4>
+                        <p class="qualification">B.E. (Computer Science)</p>
+                        <div class="divider"></div>
+                        <p class="parents">Son of Mr. & Mrs. Irfan Khan</p>
+                    </div>
+                    <div class="heart-divider" ><i class="fas fa-heart"></i></div>
+                    <div class="profile-card">
+                         <div class="profile-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Bride</h3>
+                        <h4>Sumaiya Patel</h4>
+                        <p class="qualification">M.Sc. (Data Analytics)</p>
+                        <div class="divider"></div>
+                        <p class="parents">Daughter of Mr. & Mrs. Shakeel Patel</p>
+                    </div>
+                </div>
+                <div class="scroll-indicator section-scroll-next" data-next="nikah">
+                    <span>Scroll to explore</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: NIKAH -->
+        
+        <section class="section venue" id="nikah">
+            <div class="venue-card">
+                                <div class="venue-image-container">
+                    <img src="masjid.png" alt="Shahi Masjid" class="venue-image" />
+                </div>
+                <span class="venue-tag">✦ The Holy Union ✦</span>
+                <h2>Nikaah Ceremony</h2>
+                <div class="venue-date">Saturday, 26th December 2026</div>
+                <p class="venue-time"><i class="fas fa-clock"></i> After Asr Namaz (4:30 PM)</p>
+                <p class="venue-name"><i class="fas fa-mosque"></i> Shahi Masjid</p>
+                <p class="venue-address">Kila Ark, Near Panchakki, Aurangabad</p>
+                <!-- Mosque Image -->
+            
+                <a href="https://maps.google.com" target="_blank" class="venue-btn">
+                    <i class="fas fa-location-dot"></i> Get Location
+                </a>
+            </div>
+            <div class="scroll-indicator section-scroll-next" data-next="valima">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- SECTION 5: VALIMA -->
+        <section class="section venue gold" id="valima">
+
+            <div class="venue-card gold-card">
+                <div class="venue-image-container">
+                    <img src="hall.png" alt="Royal Heritage Lawn" class="venue-image" />
+                </div>
+                <span class="venue-tag">✦ The Grand Feast ✦</span>
+                <h2>Valima Dinner</h2>
+                <div class="venue-date highlight">Sunday, 27th December 2026</div>
+                <p class="venue-time"><i class="fas fa-clock"></i> Dinner: 08:00 PM onwards</p>
+                <p class="venue-name"><i class="fas fa-hotel"></i> Royal Heritage Lawn</p>
+                <p class="venue-address">Beed Bypass Road, Near MIT College, Aurangabad</p>
+                
+                <!-- Hall Image -->
+                
+                <a href="https://maps.google.com" target="_blank" class="venue-btn primary">
+                    <i class="fas fa-map-location-dot"></i> Get Location
+                </a>
+            </div>
+            <div class="scroll-indicator section-scroll-next" data-next="greetings">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- SECTION 6: GREETINGS -->
+        <section class="section greetings" id="greetings">
+            <div class="greetings-wrapper">
+                <h2 class="greeting-title">"Forever Wishes from Khan Family"</h2>
+                <div class="greeting-block">
+                    <h3>Best Compliments From:</h3>
+                    <p>All Relatives &amp; Friends</p>
+                </div>
+                <div class="greeting-block special">
+                    <h3>Invitation from Groom's Family:</h3>
+                    <p>Mr. Irfan Khan (Father)</p>
+                    <p>Mr. Salman Khan (Uncle)</p>
+                    <p>Adnan &amp; Imran Khan (Brothers)</p>
+                </div>
+                <!-- Beautiful Dua Section -->
+                <div class="dua-section">
+                    <div class="dua-icon"></div>
+                    <p class="dua-text">"May Allah bless this union with endless love, peace, and prosperity."</p>
+                    <p class="dua-reference">— Ameen</p>
+                </div>
+                <footer class="wedding-footer">
+                    <p>We await your presence to bless the newlyweds.</p>
+                    <p class="thanks">Thank You </p>
+                </footer>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ===== CONFETTI CANVAS ===== -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
