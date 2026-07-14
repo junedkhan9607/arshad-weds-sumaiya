@@ -1,0 +1,26 @@
+{
+  "name": "arshad-weds-sumaiya",
+  "version": "1.0.0",
+  "description": "Wedding invitation website for Arshad & Sumaiya",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "preview": "npx serve .",
+    "lint": "npx eslint script.js || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junedkhan9607/arshad-weds-sumaiya.git"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {}
+}
